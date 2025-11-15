@@ -31,15 +31,19 @@ body {
 
   /*PRODUTOS*/
   #produtos {
+    display: flex;           /* ativa o flexbox */
+    flex-wrap: wrap;         /* permite que os produtos “quebrem” para a linha seguinte */
+    gap: 20px;               /* espaço entre os produtos */
+    justify-content: center; /* centraliza os produtos na página */
     padding: 40px;
   }
   /*CADA PRODUTO*/
   .produto{
     border:1px solid #ccc;
     padding: 20px;
-    margin-bottom: 20px;
     background-color: white;
-    width: 400px; /*alinha tudo à esquerda*/
+    width: 30%; /*alinha tudo à esquerda*/
+    box-sizing: border-box;  /* garante que padding e border não aumentem a largura */
   }
   /*IMAGENS DENTRO DOS PRODUTOS*/
   .produto img {
