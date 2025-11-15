@@ -19,7 +19,7 @@ body {
   header h1 {
     font-size: 150px;
     margin: 0;
-    color: #2c3e50;
+    color:#2c3e50;
   }
 
 /*CITAÇÃO*/
@@ -39,7 +39,7 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     background-color: white;
-    width: 400px /*alinha tudo à esquerda*/
+    width: 400px; /*alinha tudo à esquerda*/
   }
   /*IMAGENS DENTRO DOS PRODUTOS*/
   .produto img {
