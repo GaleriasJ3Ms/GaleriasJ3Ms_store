@@ -15,11 +15,15 @@ header{
   }
 
   p {
-    font-size:36
+    font-size: 36px;
   }
 
-  #produto{
-    border:1px solid £ccc;
+  #produtos {
+    padding: 40px;
+    background-color: #f4f4f4;
+  }
+  .produto{
+    border:1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
     background-color: white;
