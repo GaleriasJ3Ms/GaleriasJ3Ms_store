@@ -69,12 +69,14 @@ body {
 
 .scroll-down span {
   display: block;
-  width: 40px;  /* mais aberto */
-  height: 20px;
-  border-bottom: 4px solid #2c3e50;
-  border-right: 4px solid #2c3e50;
+  width: 20px;   /* largura do bico */
+  height: 20px;  /* altura do bico */
+  border-bottom: 3px solid #2c3e50;
+  border-right: 3px solid #2c3e50;
   transform: rotate(45deg);
   animation: float 1.2s ease-in-out infinite;
+  margin: 0 auto;  /* centraliza a seta horizontalmente */
+
 }
 
 .scroll-down span:nth-child(2) {
@@ -83,5 +85,6 @@ body {
 
 @keyframes float {
   0%, 100% { transform: rotate(45deg) translateY(0); }
-  50% { transform: rotate(45deg) translateY(8px); }
+  50% { transform: rotate(45deg) translateY(5px); }
 }
+
