@@ -48,7 +48,9 @@ body {
   /*IMAGENS DENTRO DOS PRODUTOS*/
   .produto img {
     max-width:100%;
-    height: auto;
+    height: 250px;        /* altura fixa (ajuste conforme necessário) */
+    object-fit: cover;    /* mantém proporção e corta o excesso */
+    display: block;       /* remove pequenos espaços embaixo da imagem */
   }
   /*PREÇO*/
   .preço{
