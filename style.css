@@ -1,6 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fbedb2;
+    margin:0;
+    padding: 0;
+}
+header{
+    background-color: #eadfb7ea;
     text-align: center;
     padding: 150px;
   }
@@ -12,4 +16,19 @@ body {
 
   p {
     font-size:36
+  }
+
+  #produto{
+    border:1px solid £ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+  .produto img {
+    max-width:100%;
+    height: auto;
+  }
+  .preço{
+    font-weight: bold;
+    color: green;
   }
