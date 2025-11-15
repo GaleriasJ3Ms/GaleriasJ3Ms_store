@@ -55,6 +55,7 @@ body {
     font-weight: bold;
     color: green;
   }
+  
   .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -62,29 +63,47 @@ body {
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  gap: 4px; /* setas mais próximas */
+  gap: 6px; /* setas mais próximas */
   cursor: pointer;
   text-decoration: none; /* remove underline do link */
 }
 
 .scroll-down span {
   display: block;
-  width: 20px;   /* largura do bico */
-  height: 20px;  /* altura do bico */
-  border-bottom: 3px solid #2c3e50;
-  border-right: 3px solid #2c3e50;
-  transform: rotate(45deg);
+  width: 30px;   /* seta maior */
+  height: 30px;  /* seta maior */
+  border-bottom: 4px solid #2c3e50;
+  border-right: 4px solid #2c3e50;
+  transform: rotate(45deg); /* mantém o bico em V */
   animation: float 1.2s ease-in-out infinite;
-  margin: 0 auto;  /* centraliza a seta horizontalmente */
-
+  margin: 0 auto;  /* centraliza a seta */
 }
 
 .scroll-down span:nth-child(2) {
-  animation-delay: 0s;
+  animation-delay: 0.3s; /* atraso para efeito de seta dupla */
 }
 
 @keyframes float {
   0%, 100% { transform: rotate(45deg) translateY(0); }
-  50% { transform: rotate(45deg) translateY(5px); }
+  50% { transform: rotate(45deg) translateY(4px); } /* movimento vertical sutil */
 }
+
+header {
+  position: relative; /* necessário para posicionamento do carrinho */
+}
+
+.cart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;           /* tamanho do ícone */
+  color: #2c3e50;            /* mesma cor do título */
+  text-decoration: none;      /* remove underline */
+  transition: transform 0.2s;
+}
+
+.cart:hover {
+  transform: scale(1.1);     /* leve efeito ao passar o mouse */
+}
+
 
