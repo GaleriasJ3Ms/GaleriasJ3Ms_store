@@ -4,31 +4,49 @@ body {
     padding: 0;
   }
   
-  h1 {
+  /* PRIMEIRA PÁGINA (HEADER) */
+  header {
     background-color: #eadfb7ea;
+    height: 100vh;                
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      
+    align-items: center;          
     text-align: center;
-    padding: 150px;
+  }
+
+  /*TITULO*/
+  header h1 {
+    font-size: 150px;
+    margin: 0;
     color: #2c3e50;
   }
 
-  p {
-    font-size: 36px;
+/*CITAÇÃO*/
+  header p {
+    font-size: 32px;
+    margin-top: 20px;
+    color: #2c3e50;
   }
 
+  /*PRODUTOS*/
   #produtos {
     padding: 40px;
-    background-color: #f4f4f4;
   }
+  /*CADA PRODUTO*/
   .produto{
     border:1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
     background-color: white;
+    width: 400px /*alinha tudo à esquerda*/
   }
+  /*IMAGENS DENTRO DOS PRODUTOS*/
   .produto img {
     max-width:100%;
     height: auto;
   }
+  /*PREÇO*/
   .preço{
     font-weight: bold;
     color: green;
