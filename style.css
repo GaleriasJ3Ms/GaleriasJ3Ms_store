@@ -57,38 +57,31 @@ body {
   }
   .scroll-down {
   position: absolute;
-  bottom: 20px; /* distancia do fundo do header */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px; /* setas mais próximas */
   cursor: pointer;
+  text-decoration: none; /* remove underline do link */
 }
 
 .scroll-down span {
-  /*display: block;
-  width: 20px;
+  display: block;
+  width: 40px;  /* mais aberto */
   height: 20px;
-  border-bottom: 3px solid #2c3e50;
-  border-right: 3px solid #2c3e50;
+  border-bottom: 4px solid #2c3e50;
+  border-right: 4px solid #2c3e50;
   transform: rotate(45deg);
-  animation: bounce 1.5s infinite;*/
-  width: 30px; /* largura maior */
-  height: 30px; /* altura maior */
-  border-bottom: 3px solid #2c3e50;
-  border-right: 3px solid #2c3e50;
-  transform: rotate(45deg);
-  animation: down 1.5s infinite;
+  animation: float 1.2s ease-in-out infinite;
 }
 
 .scroll-down span:nth-child(2) {
-  animation-delay: 0.3s; /* segunda seta com atraso para efeito duplo */
+  animation-delay: 0.3s;
 }
 
-@keyframes bounce {
-  0% { transform: rotate(45deg) translateY(0); opacity: 0; }
-  50% { transform: rotate(45deg) translateY(15px); opacity: 1; }
-  100% { transform: rotate(45deg) translateY(30px); opacity: 0; }
+@keyframes float {
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50% { transform: rotate(45deg) translateY(8px); }
 }
-
