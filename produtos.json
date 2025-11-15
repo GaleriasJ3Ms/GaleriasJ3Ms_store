@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nome": "Vestido padrão",
+    "descricao": "Tam: Único",
+    "preco": 19.99,
+    "imagem": "Imagens/vestido1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Vestido 2",
+    "descricao": "Tam: S-M-L",
+    "preco": 29.99,
+    "imagem": "Imagens/vestido2.jpg"
+  }
+]
