@@ -12,5 +12,12 @@
     "descricao": "Tam: S-M-L",
     "preco": 29.99,
     "imagem": "Imagens/vestido2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Macacão 1",
+    "descricao": "Tam: S-M-L",
+    "preco": 29.99,
+    "imagem": "Imagens/macacao1.jpg"
   }
 ]
