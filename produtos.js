@@ -20,6 +20,14 @@ fetch('produtos.json')
   })
   .catch(error => console.error('Erro ao carregar produtos:', error));
 
+  //---- SISTEMA DE CARRINHO ----//
+
+  function atualizarContador() {
+  const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  const contador = document.getElementById("cart-count");
+  contador.textContent = carrinho.length;
+}
+
   function iniciarCarrinho() {
   let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
@@ -28,14 +36,17 @@ fetch('produtos.json')
       const item = {
         id: botao.dataset.id,
         nome: botao.dataset.nome,
-        preco: botao.dataset.preco,
+        preco: Number(botao.dataset.preco),
         imagem: botao.dataset.imagem
       };
 
       carrinho.push(item);
       localStorage.setItem("carrinho", JSON.stringify(carrinho));
-
+      
+      atualizarContador();
       alert(item.nome + " foi adicionado ao carrinho!");
     });
   });
+
+  atualizarContador();
 }

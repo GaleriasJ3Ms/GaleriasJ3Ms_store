@@ -102,33 +102,44 @@ header {
   color:black;            /* mesma cor do título */
   text-decoration: none;
   z-index: 9999;      /* remove underline */
-  transition: transform 0.2s;
 }
 
-.cart:hover {
-  transform: scale(1.1);     /* leve efeito ao passar o mouse */
+#cart-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 16px;
+  margin-left: 5px;
 }
 
+/* Botão adicionar produto */
 .add-to-cart {
-  background: #2c3e50;
+  background: black;
   color: white;
   border: none;
   padding: 8px 12px;
-  cursor: pointer;
   border-radius: 8px;
+  cursor: pointer;
   font-size: 18px;
   margin-top: 10px;
-  transition: 0.2s;
 }
 
-.add-to-cart:hover {
-  background: #444;
-}
-
-/* Carrinho.html: estilo dos itens */
+/* Itens no carrinho */
 .item-carrinho {
   display: flex;
   align-items: center;
   gap: 15px;
   margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.item-carrinho .remove {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
 }

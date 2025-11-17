@@ -11,26 +11,45 @@
 
 <div id="lista-carrinho"></div>
 
+<h2 id="total"></h2>
+
 <button id="limpar">Esvaziar Carrinho</button>
 
 <script>
   function carregarCarrinho() {
     const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
     const lista = document.getElementById("lista-carrinho");
+    const totalTexto = document.getElementById("total");
 
     if (carrinho.length === 0) {
       lista.innerHTML = "<p>O carrinho está vazio.</p>";
+      totalTexto.textContent = "";
       return;
     }
 
-    lista.innerHTML = carrinho.map(item => `
+    lista.innerHTML = carrinho.map((item, index) => `
       <div class="item-carrinho">
         <img src="${item.imagem}" width="80">
         <p>${item.nome}</p>
         <p>${item.preco}€</p>
+        <button class="remove" data-index="${index}">❌</button>
       </div>
     `).join("");
-  }
+
+    // Calcular total
+    const total = carrinho.reduce((acc, item) => acc + item.preco, 0);
+    totalTexto.textContent = "Total: " + total.toFixed(2) + "€";
+
+    // Remover item
+    document.querySelectorAll(".remove").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const index = btn.dataset.index;
+        carrinho.splice(index, 1);
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        carregarCarrinho();
+      });
+    });  
+} 
 
   document.getElementById("limpar").addEventListener("click", () => {
     localStorage.removeItem("carrinho");
