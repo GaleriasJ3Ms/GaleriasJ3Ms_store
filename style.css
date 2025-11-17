@@ -56,6 +56,7 @@ body {
     color: green;
   }
   
+  /*SETAS*/
  .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -74,7 +75,7 @@ body {
   height: 30px;  /* seta maior */
   border-bottom: 4px solid #2c3e50;
   border-right: 4px solid #2c3e50;
-  transform: rotate(135deg); /* mantém o bico em V */
+  transform: rotate(90deg); /* mantém o bico em V */
   animation: float 1.2s ease-in-out infinite;
   margin: 0 auto;  /* centraliza a seta */
 }
@@ -90,6 +91,7 @@ body {
 }
 
 
+/*CARRINHO DE COMPRAS*/
 header {
   position: relative; /* necessário para posicionamento do carrinho */
 }
