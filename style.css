@@ -95,12 +95,13 @@ header {
 }
 
 .cart {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   font-size: 32px;           /* tamanho do ícone */
   color:black;            /* mesma cor do título */
-  text-decoration: none;      /* remove underline */
+  text-decoration: none;
+  z-index: 9999;      /* remove underline */
   transition: transform 0.2s;
 }
 
@@ -108,4 +109,26 @@ header {
   transform: scale(1.1);     /* leve efeito ao passar o mouse */
 }
 
+.add-to-cart {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: 0.2s;
+}
 
+.add-to-cart:hover {
+  background: #444;
+}
+
+/* Carrinho.html: estilo dos itens */
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}

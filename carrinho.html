@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Carrinho de Compras</h1>
+
+<div id="lista-carrinho"></div>
+
+<button id="limpar">Esvaziar Carrinho</button>
+
+<script>
+  function carregarCarrinho() {
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    const lista = document.getElementById("lista-carrinho");
+
+    if (carrinho.length === 0) {
+      lista.innerHTML = "<p>O carrinho está vazio.</p>";
+      return;
+    }
+
+    lista.innerHTML = carrinho.map(item => `
+      <div class="item-carrinho">
+        <img src="${item.imagem}" width="80">
+        <p>${item.nome}</p>
+        <p>${item.preco}€</p>
+      </div>
+    `).join("");
+  }
+
+  document.getElementById("limpar").addEventListener("click", () => {
+    localStorage.removeItem("carrinho");
+    carregarCarrinho();
+  });
+
+  carregarCarrinho();
+</script>
+
+</body>
+</html>
+
