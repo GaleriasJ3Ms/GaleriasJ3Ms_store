@@ -76,12 +76,13 @@ body {
   border-bottom: 4px solid #2c3e50;
   border-right: 4px solid #2c3e50;
   transform: rotate(90deg); /* mantém o bico em V */
+  -webkit-transform: rotate(90deg);
   animation: float 1.2s ease-in-out infinite;
   margin: 0 auto;  /* centraliza a seta */
 }
 
 .scroll-down span:nth-child(2) {
-  animation-delay: 0s; /* atraso para efeito de seta dupla */
+  animation-delay: 0s; /* efeito de seta dupla */
 }
 
 
